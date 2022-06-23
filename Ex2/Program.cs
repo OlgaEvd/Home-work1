@@ -1,5 +1,5 @@
 ﻿ 
- 
+ Console.WriteLine("Программа для определение максимального из двух чисел ");
         Console.Write("Введите первое число : ");
          int a = Convert.ToInt32(Console.ReadLine());
 
@@ -10,6 +10,7 @@
  
         {
              Console.WriteLine($"{a} наибольшее число", a);
+             
          }
  
         else
