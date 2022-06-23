@@ -12,9 +12,9 @@ Console.Write("Введите второе число : ");
 int b = Convert.ToInt32(Console.ReadLine());
 if (b == Math.Sqrt(a))
 {
-    Console.WriteLine($"Первое число является квадратом первого ");
+    Console.WriteLine($"Первое число является квадратом второго");
 }
 else
 {
-    Console.WriteLine($"Первое число НЕ является квадратом первого");
+    Console.WriteLine($"Первое число НЕ является квадратом второго");
 }
