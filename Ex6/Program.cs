@@ -6,6 +6,6 @@
 Console.WriteLine("Программа, которая на вход принимает число и выдаёт,является ли число чётным ");
 Console.WriteLine("    ");
 Console.Write("Введите число : ");
-double a = Convert.ToInt32(Console.Read());
+int a = Convert.ToInt32(Console.ReadLine());
 if (a%2 == 0) Console.WriteLine("Да, число чётное"); //a % 2 == 0 - если остаток от деления на 2 равен нулю
 else Console.WriteLine("Нет, число нечетное");
