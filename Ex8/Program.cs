@@ -3,9 +3,9 @@ Console.WriteLine("Программa, которая на вход приним�
 Console.WriteLine("    ");
 Console.Write("Введите число N: ");
 
-int n = Convert.ToInt32(Console.Read());
+int n = Convert.ToInt32(Console.ReadLine());
 int i = 1;
-while (i < n)
+while (i <= n)
 {
 if (i % 2 == 0) 
         
