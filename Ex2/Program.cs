@@ -9,14 +9,14 @@
         if (a > b)
  
         {
-             Console.WriteLine($"{a} наибольшее число", a);
+             Console.WriteLine($"{a} наибольшее число");
              
          }
  
         else
  
         {
-             Console.WriteLine($"{b} наибольшее число ", b);
+             Console.WriteLine($"{b} наибольшее число ");
          }
 
  
