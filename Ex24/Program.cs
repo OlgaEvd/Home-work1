@@ -13,4 +13,4 @@ sum += i;
 
 }
 
-Console.WriteLine("Cумма чисел: " + sum);
+Console.WriteLine($"Cумма чисел от 1 до {a} = {sum}");
