@@ -4,6 +4,9 @@
 //7 -> 28
 //4 -> 10
 //8 -> 36
+
+
+
 Console.WriteLine("Введите число A: ");
 int a = Convert.ToInt32(Console.ReadLine());
 int sum = 0;
