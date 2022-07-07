@@ -18,6 +18,3 @@ Palindrom(number);
 
 else Console.WriteLine($"Число введено некорректно");
 
-
-
-
