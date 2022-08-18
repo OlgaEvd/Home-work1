@@ -9,19 +9,16 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите n: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-
-Console.WriteLine($"m = {m}, n = {n}.");
-
 double[,] array = new double[m, n];
-
 
 void CreateArrayDouble(double[,] array)
 {
+    var rnd =  new Random ();
   for (int i = 0; i < m; i++)
   {
     for (int j = 0; j < n; j++)
     {
-      array[i, j] = new Random().NextDouble() * 20 ;
+      array[i, j] = rnd.NextDouble()*20;
     }
   }
 }
@@ -33,7 +30,7 @@ for (int i = 0; i < m; i++)
       for (int j = 0; j < n; j++)
       {
         double Number = Math.Round(array[i, j], 1);
-        Console.Write(Number + " ");
+        Console.Write(Number + "   ");
       }
       Console.WriteLine();
   }
