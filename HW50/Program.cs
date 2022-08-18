@@ -18,22 +18,42 @@ int pos1 = Convert.ToInt32(Console.ReadLine()) - 1;
 Console.Write("Введите столбец:");
 int pos2 = Convert.ToInt32(Console.ReadLine()) - 1;
 
-Random random = new Random();
+
 int[,] arr = new int[n, m];
-Console.WriteLine("Исходный массив:");
+
+
+void CreateArrayInt(int[,] arr)
+{
+var rnd =  new Random ();
+{
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            arr[i, j] = rnd.Next(9, 99);
+        }
+    }
+}
+}
+
+void PrintArray(int[,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            if (j == 0) Console.Write("   ");
+            if (j < arr.GetLength(1)) Console.Write(arr[i, j] + "   ");
+            else Console.Write(arr[i, j] + "   ");
+        }
+        Console.WriteLine();
+    }
+}
 
 void Position (int [,]arr)
 {
-for (int i = 0; i < arr.GetLength(0); i++)
-{
-    for (int j = 0; j < arr.GetLength(1); j++)
-    {
-        arr[i, j] = random.Next(10, 99);
-        Console.Write("{0} ", arr[i, j]);
-    }
-    Console.WriteLine();
-}
-if (pos1 < 0 | pos1 > arr.GetLength(0) - 1 | pos2 < 0 | pos2 > arr.GetLength(1) - 1)
+
+if (pos1 < 0 || pos1 > arr.GetLength(0) - 1 || pos2 < 0 || pos2 > arr.GetLength(1) - 1)
 {
     Console.WriteLine("Элемент не существует");
 }
@@ -44,5 +64,8 @@ else
 Console.ReadLine();
 }
 
+Console.WriteLine("Исходный массив:");
+CreateArrayInt(arr);
+PrintArray(arr);
 Position (arr);
 
