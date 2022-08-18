@@ -59,9 +59,36 @@ void SortLineMaxMin(int[,] arr)
 }
 }
 
+void SortLineMinMax(int[,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+{
+    for (int j = 0; j < arr.GetLength(1) + 1; j++)
+    {
+        for (int c = 0; c < arr.GetLength(1) - 1; c++)
+        {
+            if (arr[i, c] > arr[i, c + 1]) 
+            {
+                int temp = 0;
+                temp = arr[i, c];
+                arr[i, c] = arr[i, c + 1];
+                arr[i, c + 1] = temp;
+            }
+        }
+    }
+}
+}
+
 int [,] matrix =  CreateArrayInt(m,n, 10, 99);
 Console.WriteLine("Исходный массив:");
 PrintArray(matrix);
+
+Console.WriteLine("");
 Console.WriteLine("Массив с упорядоченными значениями (От большего к меньшему)");
 SortLineMaxMin(matrix);
+PrintArray(matrix);
+
+Console.WriteLine("");
+Console.WriteLine("Массив с упорядоченными значениями (От  меньшему к большему)");
+SortLineMinMax(matrix);
 PrintArray(matrix);
